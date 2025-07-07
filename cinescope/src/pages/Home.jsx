@@ -3,6 +3,7 @@ import { fetchTrending } from '../api';
 
 export default function Home() {
   const [movies, setMovies] = useState([]);
+  console.log('✅ Home component loaded');
 
   useEffect(() => {
   fetchTrending().then((data) => {
