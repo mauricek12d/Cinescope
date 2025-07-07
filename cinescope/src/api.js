@@ -7,16 +7,33 @@ export const fetchTrending = async () => {
   return data.results;
 };
 
-export const fetchMovieVideos = async (movieId) => {
-  const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
-  const res = await fetch(`https://api.themoviedb.org/3/movie/${movieId}/videos?api_key=${API_KEY}`);
+export const fetchTopRated = async () => {
+  const res = await fetch(`${BASE_URL}/movie/top_rated?api_key=${API_KEY}`);
+  const data = await res.json();
+  return data.results;
+};
+
+export const fetchNowPlaying = async () => {
+  const res = await fetch(`${BASE_URL}/movie/now_playing?api_key=${API_KEY}`);
+  const data = await res.json();
+  return data.results;
+};
+
+export const fetchUpcoming = async () => {
+  const res = await fetch(`${BASE_URL}/movie/upcoming?api_key=${API_KEY}`);
+  const data = await res.json();
+  return data.results;
+};
+
+export const fetchMoviesByGenre = async (genreId) => {
+  const res = await fetch(`${BASE_URL}/discover/movie?api_key=${API_KEY}&with_genres=${genreId}`);
   const data = await res.json();
   return data.results;
 };
 
 export const searchMovies = async (query) => {
   const res = await fetch(
-    `${BASE_URL}/search/movie?api_key=${API_KEY}&query=${encodeURIComponent(query)}&language=en-US&page=1&include_adult=false`
+    `${BASE_URL}/search/movie?api_key=${API_KEY}&query=${encodeURIComponent(query)}`
   );
   const data = await res.json();
   return data.results;
