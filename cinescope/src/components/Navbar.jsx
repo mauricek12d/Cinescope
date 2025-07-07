@@ -7,6 +7,7 @@ export default function Navbar() {
       <div className="space-x-4">
         <Link to="/">Home</Link>
         <Link to="/watchlist">Watchlist</Link>
+        <Link to="/search">Search</Link>
       </div>
     </nav>
   );
