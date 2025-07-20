@@ -25,9 +25,7 @@
 
 ## 📸 Preview
 
-> Live Demo: [https://cinescope.vercel.app](https://cinescope.vercel.app)
-
-![screenshot](public/cinescope-preview.png)
+> Live Demo: https://cinescopeit.netlify.app/
 
 ## ⚙️ Installation
 
