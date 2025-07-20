@@ -61,21 +61,7 @@ cinescope/
 ├── .env
 └── index.html
 
-🧪 Future Enhancements
-User authentication with Firebase Auth
 
-Firestore integration for cloud-stored watchlists
-
-Genre filtering
-
-Infinite scroll
-
-Dark/light toggle
-
-.
-
-🙌 Author
-Built with ❤️ by Maurice Zuniga
 
 
 
