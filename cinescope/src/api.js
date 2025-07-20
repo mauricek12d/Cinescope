@@ -13,14 +13,16 @@ export const fetchTopRated = async () => {
   return data.results;
 };
 
-export const fetchNowPlaying = async () => {
-  const res = await fetch(`${BASE_URL}/movie/now_playing?api_key=${API_KEY}`);
+export const fetchNowPlaying = async (region = 'US') => {
+  const res = await fetch(`${BASE_URL}/movie/now_playing?api_key=${API_KEY}&region=${region}`);
   const data = await res.json();
   return data.results;
 };
 
-export const fetchUpcoming = async () => {
-  const res = await fetch(`${BASE_URL}/movie/upcoming?api_key=${API_KEY}`);
+export const fetchUpcoming = async (page = 1) => {
+  const res = await fetch(
+    `${BASE_URL}/movie/upcoming?api_key=${API_KEY}&language=en-US&region=US&page=${page}`
+  );
   const data = await res.json();
   return data.results;
 };
